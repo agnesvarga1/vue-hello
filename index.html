@@ -9,6 +9,12 @@
       integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+    />
     <title>Hi VUE</title>
   </head>
   <body>
@@ -16,6 +22,17 @@
       <div class="container text-center">
         <h1>{{ message }}</h1>
         <img :src="img" alt="" />
+        <div class="row">
+          <div class="col-6 text-end">
+            <button @click=" addLike  " class="btn">
+              <i
+                v-bind:class="( liked == true )  ? 'text-primary' : 0 "
+                class="fa-solid fa-thumbs-up fs-3 m-2"
+              ></i>
+            </button>
+            <span>{{likes}}</span>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://unpkg.com/vue@3"></script>
