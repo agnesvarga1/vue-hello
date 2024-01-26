@@ -24,7 +24,7 @@
         <img :src="img" alt="" />
         <div class="row">
           <div class="col-6 text-end">
-            <button @click=" addLike  " class="btn">
+            <button @click=" toggleLike  " class="btn">
               <i
                 v-bind:class="( liked == true )  ? 'text-primary' : 0 "
                 class="fa-solid fa-thumbs-up fs-3 m-2"
