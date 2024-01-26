@@ -10,9 +10,16 @@ createApp({
   },
 
   methods: {
-    addLike: function () {
-      this.liked = !this.liked;
-      this.likes = this.likes++;
+    toggleLike: function (param) {
+      param = this.liked;
+      if (!param) {
+        this.likes++;
+        this.liked = !this.liked;
+      } else {
+        this.likes--;
+        this.liked = !this.liked;
+      }
+      return this.likes;
     },
   },
 }).mount("#app");
